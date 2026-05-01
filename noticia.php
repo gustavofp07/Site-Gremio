@@ -23,13 +23,13 @@
                 </div>
             </div>
             <div class="container px-5 mt-4">
-                <h1 class="h3 display-6 lh-1 text-center respt mt-4"><? echo $registro['titulo']; ?></h1>
-                <p class="lead fw-normal text-muted mb-2 resp text-center"><? echo $registro['subtitulo']; ?></p>
+                <h1 class="h3 display-6 lh-1 text-center respt mt-4"><?php echo $registro['titulo']; ?></h1>
+                <p class="lead fw-normal text-muted mb-2 resp text-center"><?php echo $registro['subtitulo']; ?></p>
                 <div class="row">
-                  <p class="lead fw-normal text-muted mb-5 resp text-justify"><? echo html_entity_decode($registro['texto']); ?></p>
+                  <p class="lead fw-normal text-muted mb-5 resp text-justify"><?php echo html_entity_decode($registro['texto']); ?></p>
                 </div>
                 <p class="text-muted mb-2 mt-2 resp text-justify">Publicado em: <?php echo $registro['dataHorario']; ?></p>
-                <? if($registro['edicao'] != ""){
+                <?php if($registro['edicao'] != ""){
                     echo '<p class="text-muted mb-2 resp text-justify">Editado em:'.$registro['edicao'].'</p>';
                 } ?>
                 
