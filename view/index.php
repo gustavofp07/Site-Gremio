@@ -13,7 +13,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
             <div class="container px-5 d-flex justify-content-center">
-                <a href="index.php"><img class="img-fluid logo ml-4" src="imagens/logo.jpeg" alt="logo do grêmio"></a>
+                <a href="index.php"><img class="img-fluid logo ml-4" src="../imagens/logo.jpeg" alt="logo do grêmio"></a>
                 <a class="navbar-brand fw-bold" href="#page-top">Grêmio Estudantil</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
@@ -50,7 +50,7 @@
                     </div>
                     <div class="col-lg-6 mt-2">
                         <figure class="figure">
-                            <img src="imagens/principal2.jpeg" class="figure-img img-fluid rounded" alt="Imagem de um quadrado genérico com bordas arredondadas, em uma figure.">
+                            <img src="../imagens/principal2.jpeg" class="figure-img img-fluid rounded" alt="Imagem de um quadrado genérico com bordas arredondadas, em uma figure.">
                             <figcaption class="figure-caption text-center">Jogos de Vôlei, 2023</figcaption>
                         </figure>
                     </div>
@@ -107,7 +107,7 @@
                         <p class="lead fw-normal text-muted mb-5 mb-lg-0 resp text-justify">O Grêmio Estudantil Campus Timóteo preza pela transparência nas ações e uso dos recursos financeiros. Saiba como o dinheiro está sendo utilizado pela entidade! <br><a href="fiscalize.php">Clique Aqui!</a></p>
                     </div>
                     <div class="col-sm-8 col-md-6">
-                    <img src="imagens/fiscal.png" class="figure-img img-fluid rounded" alt="Imagem de um quadrado genérico com bordas arredondadas, em uma figure.">
+                    <img src="../imagens/fiscal.png" class="figure-img img-fluid rounded" alt="Imagem de um quadrado genérico com bordas arredondadas, em uma figure.">
                     </div>
                 </div>
             </div>

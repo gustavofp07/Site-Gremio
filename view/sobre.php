@@ -20,7 +20,7 @@
                     </div>
                     <div class="col-lg-6 mt-2">
                         <figure class="figure">
-                            <img src="imagens/principal2.jpeg" class="figure-img img-fluid rounded" alt="Imagem de um quadrado genérico com bordas arredondadas, em uma figure.">
+                            <img src="../imagens/principal2.jpeg" class="figure-img img-fluid rounded" alt="Imagem de um quadrado genérico com bordas arredondadas, em uma figure.">
                             <figcaption class="figure-caption text-center">Jogos de Vôlei, 2023</figcaption>
                         </figure>
                     </div>

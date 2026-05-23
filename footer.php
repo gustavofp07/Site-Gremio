@@ -2,7 +2,7 @@
 <footer class="bg-black text-center py-5">
     <div class="container px-5">
         <div class="text-white-50 small">
-            <div class="mb-2">&copy; Gestão Avanço 2024. A luta continua!</div>
+            <div class="mb-2">&copy; Gestão Ecoar 2026!</div>
             <a href="sobre.php">Sobre nós</a>
             <span class="mx-1">&middot;</span>
             <a href="noticias.php">Notícias</a>
@@ -16,7 +16,7 @@
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Core theme JS-->
-<script src="js/scripts.js"></script>
+<script src="../js/scripts.js"></script>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
 <!-- * *                               SB Forms JS                               * *-->
 <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->

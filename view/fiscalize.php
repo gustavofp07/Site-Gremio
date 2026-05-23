@@ -24,7 +24,7 @@
                     </div>
                     <div class="col-lg-6">
                         <figure class="figure">
-                            <img src="imagens/fiscal.png" class="figure-img img-fluid rounded" alt="Imagem de um quadrado genérico com bordas arredondadas, em uma figure.">
+                            <img src="../imagens/fiscal.png" class="figure-img img-fluid rounded" alt="Imagem de um quadrado genérico com bordas arredondadas, em uma figure.">
                         </figure>
                     </div>
                 </div>
