@@ -1,17 +1,17 @@
 <?php
-  include_once "noticiaBD.php";
+  include_once __DIR__ . "/../repo/noticiaBD.php";
   $registros = listar();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include_once 'head.php'; ?>
+        <?php include_once __DIR__ . '/../head.php'; ?>
         <title>Notícias</title>
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <?php include_once 'menu.php'; ?>
+        <?php include_once __DIR__ . '/../menu.php'; ?>
         <section id="noticias">
             <div class="container px-5">
               <div class="container px-5 p-0">
@@ -49,6 +49,7 @@
                 </div>
             </div>
         </section>
-        <?php include_once 'footer.php'; ?>
+        <?php include_once __DIR__ . '/../footer.php'; ?>
     </body>
 </html>
+

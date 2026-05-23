@@ -1,15 +1,15 @@
 <?php
-    include_once "fiscalizeBD.php";
+    include_once __DIR__ . "/../repo/fiscalizeBD.php";
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include_once 'head.php'; ?>
+        <?php include_once __DIR__ . '/../head.php'; ?>
         <title>Fiscalize!</title>
     </head>
     <body id="page-top">
-         <?php include_once 'menu.php'; ?>
+         <?php include_once __DIR__ . '/../menu.php'; ?>
         <!-- Mashead header-->
         <header class="masthead mt-2">
             <div class="container px-2 p-0">
@@ -44,6 +44,7 @@
                 </div>
             </div>
         
-        <?php include_once 'footer.php'; ?>
+        <?php include_once __DIR__ . '/../footer.php'; ?>
     </body>
 </html>
+

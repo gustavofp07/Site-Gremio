@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include_once 'head.php'; ?>
+        <?php include_once __DIR__ . '/../head.php'; ?>
         <title>Sobre Nós</title>
     </head>
     <body id="page-top">
-         <?php include_once 'menu.php'; ?>
+         <?php include_once __DIR__ . '/../menu.php'; ?>
         <!-- Mashead header-->
         <header class="masthead mt-5">
             <div class="container px-2 p-0">
@@ -59,6 +59,7 @@
                 </div>
             </div>
         
-        <?php include_once 'footer.php'; ?>
+        <?php include_once __DIR__ . '/../footer.php'; ?>
     </body>
 </html>
+
