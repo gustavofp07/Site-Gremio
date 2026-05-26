@@ -8,6 +8,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                <li class="nav-item"><a class="nav-link me-lg-3" href="index.php">Início</a></li>
                 <li class="nav-item"><a class="nav-link me-lg-3" href="sobre.php">Sobre Nós</a></li>
                 <li class="nav-item"><a class="nav-link me-lg-3" href="noticias.php">Notícias</a></li>
                 <li class="nav-item"><a class="nav-link me-lg-3" href="fiscalize.php">Fiscalize!</a></li>
