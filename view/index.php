@@ -24,6 +24,9 @@
                         <li class="nav-item"><a class="nav-link me-lg-3" href="#saiba">Sobre Nós</a></li>
                         <li class="nav-item"><a class="nav-link me-lg-3" href="#noticias">Notícias</a></li>
                         <li class="nav-item"><a class="nav-link me-lg-3" href="#fiscalize">Fiscalize!</a></li>
+
+                        <li class="nav-item"><a class="nav-link me-lg-3" href="historia.php">História</a></li>
+
                         <li class="nav-item"><a class="nav-link me-lg-3" href="http://registroarmario.gremiotimoteo.online/">Registro de Armário</a></li>
                     </ul>
                     <!--
