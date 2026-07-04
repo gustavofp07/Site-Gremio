@@ -6,6 +6,8 @@
         try{	        
             //Local
             $conexao = new PDO('mysql:host=localhost; dbname=GremioGerencia', 'root', '');
+
+            //$conexao = new PDO('mysql:host=localhost; dbname=gremio78_gerencia', 'gremio78_gustavo', 'controle6936');
  
             $conexao->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
             $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

@@ -10,10 +10,11 @@
         <title>Inicial</title>
     </head>
     <body id="page-top">
+        <?php // include_once __DIR__ . '/../menu.php'; ?>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
             <div class="container px-5 d-flex justify-content-center">
-                <a href="index.php"><img class="img-fluid logo ml-4" src="../imagens/logo.jpeg" alt="logo do grêmio"></a>
+                <a href="index.php"><img class="img-fluid logo ml-4" src="../imagens/logo.png" alt="logo do grêmio"></a>
                 <a class="navbar-brand fw-bold" href="#page-top">Grêmio Estudantil</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
@@ -39,6 +40,10 @@
                 </div>
             </div>
         </nav>
+-->
+
+
+
         <!-- Mashead header-->
         <header class="masthead mt-5">
             <div class="container px-2 p-0">
