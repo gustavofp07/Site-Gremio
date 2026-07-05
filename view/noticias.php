@@ -34,7 +34,7 @@
                           <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                             
-                            <a href="http://gremiotimoteo.online/noticia.php?codigo='.$registro['codigo'].'" class="btn btn-sm btn-outline-secondary">Ver</a>
+                            <a href="noticia.php?codigo='.$registro['codigo'].'" class="btn btn-sm btn-outline-secondary">Ver</a>
                             
                             </div>
                             <small class="text-muted">'.$registro['dataHorario'].'</small>
