@@ -97,9 +97,9 @@
                         <?php endif; ?>
 
                         <!-- Descrição -->
-                        <p class="lead fw-normal text-muted text-justify mb-4">
-                            <?= htmlspecialchars($gestao['descricao']) ?>
-                        </p>
+                        <div class="lead fw-normal text-muted text-justify mb-4">
+                            <?= nl2br(htmlspecialchars($gestao['descricao'])) ?>
+                        </div>
 
                         <!-- Lista de integrantes -->
                         <?php if ($integrantes && count($integrantes) > 0): ?>

@@ -7,6 +7,8 @@
             <span class="mx-1">&middot;</span>
             <a href="noticias.php">Notícias</a>
             <span class="mx-1">&middot;</span>
+            <a href="jornal.php">Jornal</a>
+            <span class="mx-1">&middot;</span>
             <a href="fiscalize.php">Fiscalize</a>
             <span class="mx-1">&middot;</span>
             <a href="https://gremiotimoteo.online/">Armários</a>

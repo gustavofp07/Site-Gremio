@@ -12,6 +12,7 @@
                 
                 <li class="nav-item"><a class="nav-link me-lg-3" href="sobre.php">Sobre Nós</a></li>
                 <li class="nav-item"><a class="nav-link me-lg-3" href="noticias.php">Notícias</a></li>
+                <li class="nav-item"><a class="nav-link me-lg-3" href="jornal.php">Jornal</a></li>
                 <li class="nav-item"><a class="nav-link me-lg-3" href="fiscalize.php">Fiscalize!</a></li>
 
                 <li class="nav-item"><a class="nav-link me-lg-3" href="historia.php">História</a></li>
