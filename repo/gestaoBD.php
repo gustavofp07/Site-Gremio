@@ -1,33 +1,47 @@
 <?php
+/**
+ * Gestões do grêmio (vêm da API, já com os membros), da mais recente para a mais antiga.
+ * foto1/foto2 agora são o endereço completo da imagem (ou '' se não houver).
+ */
 
-include_once "banco.php";
+require_once __DIR__ . '/api.php';
 
-// Retorna todas as gestões ordenadas do mais recente para o mais antigo
-function listarGestoes() {
-    try {
-        $sql = "SELECT * FROM gestao ORDER BY id DESC";
-        //$sql = "SELECT * FROM gestao ORDER BY ordem ASC";
-        $conexao = criarConexao();
-        $sentenca = $conexao->prepare($sql);
-        $sentenca->execute();
-        $conexao = null;
-        return $sentenca->fetchAll(PDO::FETCH_ASSOC);
-    } catch (PDOException $erro) {
-        echo $erro;
+function listarGestoes(): array
+{
+    $gestoes = [];
+    foreach (apiGet('gestoes') ?? [] as $g) {
+        $gestoes[] = [
+            'id' => $g['cdGestao'],
+            'nome' => $g['nome'],
+            'periodo' => $g['periodo'],
+            'descricao' => $g['descricao'],
+            'atual' => $g['atual'] ? 1 : 0,
+            'foto1' => $g['foto1']['url'] ?? '',
+            'foto2' => $g['foto2']['url'] ?? '',
+            'integrantes' => $g['membros'] ?? [],
+        ];
     }
+    return $gestoes;
 }
 
-// Retorna todos os integrantes de uma gestão específica
-function listarIntegrantes($gestao_id) {
-    try {
-        $sql = "SELECT cargo, nome FROM integrante WHERE gestao_id = :gestao_id ORDER BY id ASC";
-        $conexao = criarConexao();
-        $sentenca = $conexao->prepare($sql);
-        $sentenca->bindValue(':gestao_id', $gestao_id, PDO::PARAM_INT);
-        $sentenca->execute();
-        $conexao = null;
-        return $sentenca->fetchAll(PDO::FETCH_ASSOC);
-    } catch (PDOException $erro) {
-        echo $erro;
+/** Membros de uma gestão (cargo e nome), na ordem de exibição */
+function listarIntegrantes($gestao_id): array
+{
+    foreach (listarGestoes() as $gestao) {
+        if ($gestao['id'] == $gestao_id) {
+            return $gestao['integrantes'];
+        }
     }
+    return [];
+}
+
+/** Nome da gestão atual (ex.: "Gestão Ecoar"), ou o texto padrão se não houver */
+function nomeGestaoAtual(string $padrao = 'Grêmio Estudantil'): string
+{
+    foreach (listarGestoes() as $gestao) {
+        if ($gestao['atual']) {
+            return $gestao['nome'];
+        }
+    }
+    return $padrao;
 }

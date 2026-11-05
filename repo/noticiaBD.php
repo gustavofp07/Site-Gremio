@@ -1,55 +1,42 @@
 <?php
+/**
+ * Notícias (vêm da API). As chaves dos arrays são as mesmas do site antigo
+ * (codigo, titulo, subtitulo, texto, dataHorario, edicao) para as páginas não mudarem.
+ */
 
-include_once "banco.php";
+require_once __DIR__ . '/api.php';
 
-function listar(){
-    try{
-        $sql = "SELECT * FROM Noticia ORDER BY dataHorario DESC;";
-
-        $conexao = criarConexao();        
-        $sentenca = $conexao->prepare($sql);
-    
-        $sentenca->execute();     
-        $conexao = null;
-        return $sentenca->fetchAll();
-    }catch (PDOException $erro){
-        echo ($erro);
-    }
+function noticiaDaApi(array $n): array
+{
+    return [
+        'codigo' => $n['cdNoticia'],
+        'titulo' => $n['titulo'],
+        'subtitulo' => $n['subtitulo'] ?? '',
+        // HTML do editor, já limpo pela API (scripts removidos)
+        'texto' => $n['texto'],
+        'dataHorario' => formatarData($n['dtPublicacao'] ?? null),
+        'edicao' => formatarData($n['dtEdicao'] ?? null),
+    ];
 }
 
-function listarIndex(){
-    try{
-        $sql = "SELECT *
-        FROM Noticia
-        ORDER BY dataHorario DESC
-        LIMIT 3;";
-
-        $conexao = criarConexao();        
-        $sentenca = $conexao->prepare($sql);
-        
-    
-        $sentenca->execute();     
-        $conexao = null;
-        return $sentenca->fetchAll();
-    }catch (PDOException $erro){
-        echo ($erro);
-    }
+/** Todas, mais recentes primeiro */
+function listar(): array
+{
+    return array_map('noticiaDaApi', apiGet('noticias') ?? []);
 }
 
-function buscarPorId($id){
-    try{
-        $sql = "SELECT *
-        FROM Noticia
-        WHERE codigo = :codigo";
+/** As 3 mais recentes (página inicial) */
+function listarIndex(): array
+{
+    return array_map('noticiaDaApi', apiGet('noticias', ['limite' => 3]) ?? []);
+}
 
-        $conexao = criarConexao();        
-        $sentenca = $conexao->prepare($sql);
-        $sentenca->bindValue(':codigo', $id);
-    
-        $sentenca->execute();     
-        $conexao = null;
-        return $sentenca->fetch();
-    }catch (PDOException $erro){
-        echo ($erro);
+/** Uma notícia, ou null se não existir */
+function buscarPorId($id): ?array
+{
+    if (!ctype_digit((string) $id)) {
+        return null;
     }
+    $noticia = apiGet('noticias/' . $id);
+    return $noticia ? noticiaDaApi($noticia) : null;
 }

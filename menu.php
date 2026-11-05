@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/repo/config.php'; ?>
 <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
     <div class="container px-5 d-flex justify-content-center">
         <a href="index.php"><img class="img-fluid logo ml-4" src="../imagens/logo.png" alt="logo do grêmio"></a>
@@ -17,7 +18,7 @@
 
                 <li class="nav-item"><a class="nav-link me-lg-3" href="historia.php">História</a></li>
 
-                <li class="nav-item"><a class="nav-link me-lg-3" href="http://registroarmario.gremiotimoteo.online/">Registro de Armário</a></li>
+                <li class="nav-item"><a class="nav-link me-lg-3" href="<?= URL_ARMARIOS ?>">Armários</a></li>
             </ul>
             <!--
             <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">

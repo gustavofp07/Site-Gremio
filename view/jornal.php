@@ -4,7 +4,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <?php include_once __DIR__ . '/../head.php'; ?>
         <title>Jornal</title>
@@ -19,7 +19,7 @@
                       <div class="mb-5 mb-lg-0 text-center text-lg-start"></div>
                   </div>
               </div>
-                <h1 class="display-6 lh-1 mb-3 text-center mt-4">Jornal</h1>
+                <h1 class="display-6 lh-1 mb-3 text-center mt-4">Jornal Narcisa Amália</h1>
                 <?php if (count($registros) === 0) { ?>
                   <p class="text-center text-muted mt-4">Nenhuma edição publicada até o momento.</p>
                 <?php } ?>

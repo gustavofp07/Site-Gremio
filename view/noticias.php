@@ -4,7 +4,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <?php include_once __DIR__ . '/../head.php'; ?>
         <title>Notícias</title>
@@ -23,21 +23,24 @@
                   </div>
               </div>
                 <h1 class="display-6 lh-1 mb-3 text-center mt-4">Notícias</h1>
+                <?php if (count($registros) === 0) { ?>
+                  <p class="text-center text-muted mt-4">Nenhuma notícia por enquanto.</p>
+                <?php } ?>
                 <div class="row">
                 <?php	
                     foreach($registros as $registro){
                       echo '<div class="col-md-4">
                       <div class="card mb-4 shadow-sm">
                         <div class="card-body">
-                          <h5 class="card-title text-center">'.$registro['titulo'].'</h5>
-                          <p class="card-text text-muted">'.$registro['subtitulo'].'</p>
+                          <h5 class="card-title text-center">'.e($registro['titulo']).'</h5>
+                          <p class="card-text text-muted">'.e($registro['subtitulo']).'</p>
                           <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                             
                             <a href="noticia.php?codigo='.$registro['codigo'].'" class="btn btn-sm btn-outline-secondary">Ver</a>
                             
                             </div>
-                            <small class="text-muted">'.$registro['dataHorario'].'</small>
+                            <small class="text-muted">'.e($registro['dataHorario']).'</small>
                           </div>
                         </div>
                       </div>

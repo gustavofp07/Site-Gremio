@@ -33,7 +33,7 @@
 
             if ($gestoes && count($gestoes) > 0):
                 foreach ($gestoes as $index => $gestao):
-                    $integrantes = listarIntegrantes($gestao['id']);
+                    $integrantes = $gestao['integrantes'];
                     //$ehAtual = ($gestao['ordem'] == 0); // gestão com ordem 0 fica aberta
                     $ehAtual = ($gestao['atual'] == 1);
                     $collapseId = 'gestao-collapse-' . $gestao['id'];
@@ -79,7 +79,7 @@
                         <div class="row gx-3 mb-4 justify-content-center">
                             <?php if (!empty($gestao['foto1'])): ?>
                             <div class="col-12 col-md-<?= !empty($gestao['foto2']) ? '6' : '8' ?>">
-                                <img src="../imagens/gestoes/<?= htmlspecialchars($gestao['foto1']) ?>"
+                                <img src="<?= htmlspecialchars($gestao['foto1']) ?>"
                                      class="img-fluid rounded shadow-sm w-100"
                                      style="max-height: 350px; object-fit: cover;"
                                      alt="Foto 1 da <?= htmlspecialchars($gestao['nome']) ?>">
@@ -87,7 +87,7 @@
                             <?php endif; ?>
                             <?php if (!empty($gestao['foto2'])): ?>
                             <div class="col-12 col-md-6 mt-3 mt-md-0">
-                                <img src="../imagens/gestoes/<?= htmlspecialchars($gestao['foto2']) ?>"
+                                <img src="<?= htmlspecialchars($gestao['foto2']) ?>"
                                      class="img-fluid rounded shadow-sm w-100"
                                      style="max-height: 350px; object-fit: cover;"
                                      alt="Foto 2 da <?= htmlspecialchars($gestao['nome']) ?>">

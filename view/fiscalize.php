@@ -3,7 +3,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <?php include_once __DIR__ . '/../head.php'; ?>
         <title>Fiscalize!</title>
@@ -36,9 +36,10 @@
                         <h1 class="display-6 lh-1 mb-3 respt">Como funciona o dinheiro do Grêmio?</h1>
                         <p class="lead fw-normal text-muted mb-5 resp text-justify">O dinheiro do Grêmio Estudantil é de todos os sócios (estudantes) que compõem o grêmio. Ao início do ano são feitas arrecadações com vendas de rifas e itens gerais. A partir disso, a Diretoria do Grêmio planeja a utilização dos recursos de acordo com os projetos e sob demanda. Tudo é assinado pelo Conselho Fiscal (Presidente ou Vice-Presidente e Tesoureiros) e deliberado no Conselho de Representantes de Turma.</p>
                         <h1 class="display-6 lh-1 mb-3 respt">Como está o caixa do grêmio atualmente?</h1>
-                        <p class="lead fw-normal text-muted mb-4 resp text-justify">O ano orçamentário iniciou-se junto com a posse da gestão (03/01/2024). Até o momento os recursos são:</p><br>
+                        <p class="lead fw-normal text-muted mb-4 resp text-justify">Valores registrados pela tesouraria do grêmio até o momento:</p><br>
                         <p class="lead fw-normal text-muted mb-2 resp text-justify">Entradas: <?php echo entrada(); ?></p>
-                        <p class="lead fw-normal text-muted mb-5 resp text-justify">Saídas: <?php echo saida(); ?> </p>
+                        <p class="lead fw-normal text-muted mb-2 resp text-justify">Saídas: <?php echo saida(); ?></p>
+                        <p class="lead fw-normal text-muted mb-5 resp text-justify"><strong>Saldo: <?php echo saldo(); ?></strong></p>
                         <p class="lead fw-normal text-muted mb- resp text-justify">Os documentos referentes à essa execução do orçamento estão disponíveis <a href="https://drive.google.com/drive/folders/11rqL1DNnQ_KscuW1Rhm-hYLEmdChdEQ1?usp=sharing">aqui</a></p>
                     </div>                    
                 </div>

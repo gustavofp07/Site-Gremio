@@ -1,10 +1,12 @@
 <?php
 include_once __DIR__ . "/../repo/noticiaBD.php";
+include_once __DIR__ . "/../repo/gestaoBD.php";
 $registros = listarIndex();
+$gestaoAtual = nomeGestaoAtual('Gestão atual');
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <?php include_once __DIR__ . '/../head.php'; ?>
@@ -27,11 +29,12 @@ $registros = listarIndex();
                 <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
                     <li class="nav-item"><a class="nav-link me-lg-3" href="#saiba">Sobre Nós</a></li>
                     <li class="nav-item"><a class="nav-link me-lg-3" href="#noticias">Notícias</a></li>
+                    <li class="nav-item"><a class="nav-link me-lg-3" href="jornal.php">Jornal</a></li>
                     <li class="nav-item"><a class="nav-link me-lg-3" href="#fiscalize">Fiscalize!</a></li>
 
                     <li class="nav-item"><a class="nav-link me-lg-3" href="historia.php">História</a></li>
 
-                    <li class="nav-item"><a class="nav-link me-lg-3" href="http://registroarmario.gremiotimoteo.online/">Registro de Armário</a></li>
+                    <li class="nav-item"><a class="nav-link me-lg-3" href="<?= URL_ARMARIOS ?>">Armários</a></li>
                 </ul>
                 <!--
                     <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
@@ -43,7 +46,6 @@ $registros = listarIndex();
             </div>
         </div>
     </nav>
-    -->
 
 
 
@@ -73,7 +75,7 @@ $registros = listarIndex();
             <div class="row gx-5 justify-content-center">
                 <div class="col-xl-8">
                     <h6 class="h3 lh-1 mb-3 text-center text-white">Sobre nós</h6>
-                    <div class="h6 fw-normal text mb-5 mb-lg-0 text-white mb-4 text-justify">Nós somos o Grêmio Estudantil do CEFET-MG Campus Timóteo. O grêmio é uma entidade estudantil construído pelos estudantes e dirido pela Diretoria do Grêmio, atualmente, a Gestão Avanço. <br><br><a href="sobre.php" class="text-danger">Saiba Mais</a></div>
+                    <div class="h6 fw-normal text mb-5 mb-lg-0 text-white mb-4 text-justify">Nós somos o Grêmio Estudantil do CEFET-MG Campus Timóteo. O grêmio é uma entidade estudantil construído pelos estudantes e dirido pela Diretoria do Grêmio, atualmente, a <?= e($gestaoAtual) ?>. <br><br><a href="sobre.php" class="text-danger">Saiba Mais</a></div>
                 </div>
             </div>
         </div>
@@ -88,17 +90,20 @@ $registros = listarIndex();
                     echo '<div class="col-md-4">
                       <div class="card mb-4 shadow-sm">
                         <div class="card-body">
-                          <h5 class="card-title text-center">' . $registro['titulo'] . '</h5>
-                          <p class="card-text text-muted">' . $registro['subtitulo'] . '</p>
+                          <h5 class="card-title text-center">' . e($registro['titulo']) . '</h5>
+                          <p class="card-text text-muted">' . e($registro['subtitulo']) . '</p>
                           <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                               <a href="noticia.php?codigo=' . $registro['codigo'] . '" class="btn btn-sm btn-outline-secondary">Ver</a>
                             </div>
-                            <small class="text-muted">' . $registro['dataHorario'] . '</small>
+                            <small class="text-muted">' . e($registro['dataHorario']) . '</small>
                           </div>
                         </div>
                       </div>
                     </div>';
+                }
+                if (count($registros) === 0) {
+                    echo '<p class="text-center text-muted">Nenhuma notícia por enquanto.</p>';
                 }
                 ?>
             </div>

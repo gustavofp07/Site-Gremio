@@ -1,8 +1,9 @@
+<?php require_once __DIR__ . '/repo/gestaoBD.php'; ?>
 <!-- Footer-->
 <footer class="bg-black text-center py-5">
     <div class="container px-5">
         <div class="text-white-50 small">
-            <div class="mb-2">&copy; Gestão Ecoar 2026!</div>
+            <div class="mb-2">&copy; <?= e(nomeGestaoAtual()) ?> <?= date('Y') ?></div>
             <a href="sobre.php">Sobre nós</a>
             <span class="mx-1">&middot;</span>
             <a href="noticias.php">Notícias</a>
@@ -11,7 +12,7 @@
             <span class="mx-1">&middot;</span>
             <a href="fiscalize.php">Fiscalize</a>
             <span class="mx-1">&middot;</span>
-            <a href="https://gremiotimoteo.online/">Armários</a>
+            <a href="<?= URL_ARMARIOS ?>">Armários</a>
         </div>
     </div>
 </footer>

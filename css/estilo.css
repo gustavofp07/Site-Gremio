@@ -29,3 +29,16 @@
         font-size: 0.7em;
     }
 }
+
+/* Texto das notícias (HTML do editor do app do grêmio) */
+.texto-noticia img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 12px 0;
+}
+.texto-noticia blockquote {
+    border-left: 4px solid #ccc;
+    padding-left: 12px;
+    font-style: italic;
+}

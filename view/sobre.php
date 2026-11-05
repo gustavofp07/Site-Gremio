@@ -1,5 +1,6 @@
+<?php include_once __DIR__ . "/../repo/gestaoBD.php"; ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <?php include_once __DIR__ . '/../head.php'; ?>
@@ -37,7 +38,7 @@
                 <h1 class="display-6 lh-1 mb-3 respt">Como fazer parte?</h1>
                 <p class="lead fw-normal text-muted mb-5 resp text-justify">Ao final do ano são realizadas as Eleições para Diretoria do Grêmio Estudantil. Os estudantes interessados podem formar uma chapa e concorrer para assumir a gestão. Gestões ativas também podem convidar estudantes para ingressarem na diretoria. Além disso, qualquer um pode ajudar nos eventos, basta procurar um membro da gestão :)</p>
                 <h1 class="display-6 lh-1 mb-3 respt">Quem somos nós?</h1>
-                <p class="lead fw-normal text-muted resp">Atualmente a Diretoria do Grêmio Estudantil Campus Timóteo é construída pela Gestão Ecoar.</p>
+                <p class="lead fw-normal text-muted resp">Atualmente a Diretoria do Grêmio Estudantil Campus Timóteo é construída pela <?= e(nomeGestaoAtual('gestão atual')) ?>.</p>
             </div>
             
             <div class="mb-4 justify-content-left">
